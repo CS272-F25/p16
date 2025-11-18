@@ -12,7 +12,7 @@ fetch('merchandise.csv')
       if (!product.name) return;
       const col = document.createElement('div');
       col.className = 'col-md-4 mb-4';
-      col.innerHTML = `
+      col.innerHTML =`
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">${product.name}</h5>
