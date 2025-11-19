@@ -7,16 +7,16 @@ fetch('merchandise.csv')
       return { name, price};
     });
 
-    const list = document.getElementById('product-list');
+    const list = document.getElementById('product-container');
     products.forEach(product => {
       if (!product.name) return;
       const col = document.createElement('div');
-      col.className = 'col-md-4 mb-4';
+      col.classList.add("col-12", "col-sm-6", "col-lg-4", "col-xl-3", "mb-4");
       col.innerHTML =`
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">${product.name}</h5>
-            <p class="card-text">$${product.price}</p>
+            <p class="card-text">${product.price}</p>
             <div class="d-flex align-items-center">
               <input type="number" class="form-control me-2" value="1" min="1" max="100" style="width:80px;">
               <button class="btn btn-primary">Add to Cart</button>

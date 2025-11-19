@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Cards</title>
-    <link rel="stylesheet" href="global.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Our Products</h1>
     </header>
     <main>
-        <div id="product-container" class="product-container">
-            <!-- Product cards will be dynamically inserted here -->
+<div class="container mt-4">
+  <div class="row mb-3">
+    <div class="col-12">
+      <input type="text" id="search-bar" class="form-control" placeholder="Search our products...">
+    </div>
+  </div>
+        <div id="product-container" class="row">
         </div>
     </main>
-    <script src="products.js"></script>
+    <script src="js/products.js"></script>
 </body>
 </html>
