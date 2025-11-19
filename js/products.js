@@ -2,13 +2,18 @@ fetch('merchandise.csv')
   .then(response => response.text())
   .then(data => {
     const rows = data.split('\n').slice(1);
-    const products = rows.map(row => {
+    products = rows.map(row => {
       const [name, price, stock] = row.split(',');
       return { name, price};
     });
 
+    renderProducts(products);
+});
+function renderProducts(productArray) {
     const list = document.getElementById('product-container');
-    products.forEach(product => {
+    list.innerHTML = ''; //clear prodcuts that don't fit criteria
+
+    productArray.forEach(product => {
       if (!product.name) return;
       const col = document.createElement('div');
       col.classList.add("col-12", "col-sm-6", "col-lg-4", "col-xl-3", "mb-4");
@@ -26,4 +31,10 @@ fetch('merchandise.csv')
       `;
       list.appendChild(col);
     });
+}
+//the actual search
+document.getElementById('search-bar').addEventListener('input', function(f) {
+    const query = f.target.value.toLowerCase();
+    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(query));
+    renderProducts(filteredProducts);
   });
