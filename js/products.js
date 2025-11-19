@@ -1,4 +1,4 @@
-fetch('merchandise.csv')
+fetch('https://raw.githubusercontent.com/mildebrandtj/product-data-p16/refs/heads/main/merchandise.csv')
   .then(response => response.text())
   .then(data => {
     const rows = data.split('\n').slice(1);
