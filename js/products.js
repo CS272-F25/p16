@@ -38,3 +38,12 @@ document.getElementById('search-bar').addEventListener('input', function(e) {
     const filteredProducts = products.filter(product => product.name.toLowerCase().includes(query));
     renderProducts(filteredProducts);
   });
+//sorting buttons
+document.getElementById('sort-low-high').addEventListener('click', function() {
+    const sortedProducts = [...products].sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+    renderProducts(sortedProducts);
+});
+document.getElementById('sort-high-low').addEventListener('click', function() {
+    const sortedProducts = [...products].sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+    renderProducts(sortedProducts);
+});
