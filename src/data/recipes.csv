@@ -1,0 +1,201 @@
+Cuisine,Recipe Name,Ingredients,Instructions
+Italy,Spaghetti Carbonara,Spaghetti; Eggs; Pecorino Romano; Guanciale; Black Pepper,Cook pasta and mix with sauce
+Italy,Margherita Pizza,Pizza dough; Tomatoes; Mozzarella; Basil,Bake until crust is crisp
+Italy,Lasagna,Pasta sheets; Beef; Tomato sauce; Cheese,Layer and bake
+Italy,Risotto alla Milanese,Arborio rice; Saffron; Parmesan; Butter,Simmer slowly while stirring
+Italy,Tiramisu,Ladyfingers; Mascarpone; Coffee; Cocoa,Layer and chill
+Italy,Pesto Genovese,Basil; Pine nuts; Parmesan; Olive oil; Garlic,Blend into a paste
+Italy,Fettuccine Alfredo,Fettuccine; Butter; Cream; Parmesan,Mix sauce with cooked pasta
+Italy,Osso Buco,Veal shanks; Vegetables; Wine,Braise until tender
+Italy,Chicken Parmigiana,Chicken cutlet; Marinara; Mozzarella,Bake until cheese melts
+Italy,Caprese Salad,Tomatoes; Mozzarella; Basil; Olive oil,Serve fresh
+Spain,Paella Valenciana,Rice; Saffron; Chicken; Seafood; Vegetables,Cook rice with stock and toppings
+Spain,Tortilla Española,Potatoes; Eggs; Onions,Fry and set like a thick omelet
+Spain,Gazpacho,Tomatoes; Onion; Cucumber; Olive oil,Blend and chill
+Spain,Patatas Bravas,Potatoes; Paprika sauce,Fry potatoes and top with sauce
+Spain,Churros,Flour; Butter; Sugar; Cinnamon,Fry dough and coat in sugar
+Spain,Albóndigas,Beef; Garlic; Tomato sauce,Simmer in sauce
+Spain,Fabada Asturiana,Beans; Sausage; Ham,Slow cook until tender
+Spain,Pisto,Peppers; Tomato; Onion; Zucchini,Sauté together
+Spain,Gambas al Ajillo,Shrimp; Garlic; Olive oil,Sauté shrimp in garlic
+Spain,Pulpo a la Gallega,Octopus; Paprika; Olive oil,Slice and season
+Mexico,Tacos al Pastor,Pork; Pineapple; Tortillas,Grill and assemble
+Mexico,Guacamole,Avocado; Onion; Lime; Cilantro,Mash and mix
+Mexico,Chilaquiles,Tortilla chips; Salsa; Cheese,Cook until softened
+Mexico,Mole Poblano,Chilies; Chocolate; Spices,Simmer into sauce
+Mexico,Enchiladas,Tortillas; Chicken; Cheese; Salsa,Fill and bake
+Mexico,Posole,Hominy; Pork; Chilies,Simmer long and slow
+Mexico,Huevos Rancheros,Eggs; Tortillas; Salsa,Serve eggs over tortillas
+Mexico,Quesadillas,Tortillas; Cheese,Heat until melted
+Mexico,Sopa de Lima,Lime; Chicken; Tortilla strips,Simmer and serve
+Mexico,Elote,Corn; Mayonnaise; Cheese; Chili powder,Grill and dress
+Thailand,Pad Thai,Rice noodles; Tamarind; Shrimp; Egg,Stir fry together
+Thailand,Green Curry,Coconut milk; Green curry paste; Chicken,Simmer together
+Thailand,Tom Yum,Shrimp; Lemongrass; Lime,Broth with aromatics
+Thailand,Massaman Curry,Potato; Peanuts; Beef; Curry paste,Simmer in coconut milk
+Thailand,Pad See Ew,Wide noodles; Soy sauce; Pork,Stir fry with vegetables
+Thailand,Som Tam,Green papaya; Lime; Chili,Pound and mix
+Thailand,Khao Soi,Egg noodles; Curry broth,Serve with chicken and toppings
+Thailand,Pla Rad Prik,Whole fish; Chili sauce,Fry and top
+Thailand,Larb,Minced meat; Lime; Herbs,Mix and serve fresh
+Thailand,Sai Ua,Pork sausage; Herbs,Grill and slice
+Turkey,Lahmacun,Flatbread; Minced lamb; Spices,Bake until crisp
+Turkey,Doner Kebab,Lamb; Yogurt; Flatbread,Shave meat and wrap
+Turkey,Manti,Dumplings; Yogurt sauce,Boil and top
+Turkey,Menemen,Eggs; Tomato; Peppers,Scramble together
+Turkey,Pide,Boat-shaped flatbread; Cheese; Meat,Bake until golden
+Turkey,Baklava,Phyllo; Nuts; Honey,Syrup-soak after baking
+Turkey,Kofte,Lamb; Spices; Onion,Form patties and grill
+Turkey,Imam Bayildi,Eggplant; Tomato; Garlic,Braise until tender
+Turkey,Kunefe,Cheese pastry; Syrup,Bake and soak
+Turkey,Corba,Lentils; Vegetables; Stock,Simmer into soup
+Greece,Moussaka,Eggplant; Ground lamb; Béchamel,Bake in layers
+Greece,Spanakopita,Spinach; Feta; Phyllo,Bake until flaky
+Greece,Souvlaki,Pork; Lemon; Oregano,Grill on skewers
+Greece,Tzatziki,Yogurt; Cucumber; Garlic,Mix and chill
+Greece,Horiatiki Salad,Tomato; Cucumber; Feta,Serve fresh
+Greece,Pastitsio,Pasta; Meat sauce; Béchamel,Bake until firm
+Greece,Gemista,Stuffed tomato; Herbs,Bake until tender
+Greece,Loukoumades,Fried dough; Honey,Serve warm
+Greece,Yiouvetsi,Lamb; Orzo; Tomato sauce,Bake in clay pot
+Greece,Fasolada,Beans; Tomato; Vegetables,Simmer until soft
+France,Coq au Vin,Chicken; Wine; Carrots,Braise slowly
+France,Ratatouille,Zucchini; Peppers; Tomato,Sauté and bake
+France,Beef Bourguignon,Beef; Wine; Onions,Slow braise
+France,Quiche Lorraine,Eggs; Bacon; Cream,Bake in crust
+France,Soufflé,Eggs; Cheese; Butter,Bake until risen
+France,Nicoise Salad,Tuna; Olives; Egg,Serve chilled
+France,Baguette,Flour; Water; Yeast,Bake until crisp
+France,Crêpes,Flour; Milk; Eggs,Cook thin on pan
+France,Cassoulet,Beans; Duck confit; Sausage,Slow cook
+France,Bouillabaisse,Seafood; Tomato; Saffron,Simmer into stew
+Portugal,Caldo Verde,Kale; Potatoes; Chorizo,Simmer into soup
+Portugal,Bacalhau à Brás,Cod; Potatoes; Eggs,Sauté together
+Portugal,Pastéis de Nata,Puff pastry; Egg custard,Bake until golden
+Portugal,Francesinha,Bread; Ham; Sausage; Cheese,Bake with sauce
+Portugal,Amêijoas à Bulhão Pato,Clams; Garlic; Olive oil,Steam and serve
+Portugal,Arroz de Marisco,Rice; Seafood; Tomatoes,Simmer together
+Portugal,Feijoada,Beans; Pork; Sausage,Simmer long
+Portugal,Polvo à Lagareiro,Octopus; Olive oil,Bake and drizzle
+Portugal,Carne de Porco à Alentejana,Pork; Clams; Spices,Braise and cook
+Portugal,Sopa da Pedra,Beans; Meat; Vegetables,Simmer into soup
+Brazil,Feijoada,Black beans; Pork; Sausage,Slow cook until tender
+Brazil,Moqueca,Fish; Coconut milk; Palm oil,Simmer together
+Brazil,Pão de Queijo,Cassava flour; Cheese,Bake until puffed
+Brazil,Coxinha,Chicken; Dough; Cheese,Deep fry
+Brazil,Brigadeiro,Condensed milk; Cocoa; Butter,Roll into balls
+Brazil,Pastel,Dough; Meat; Cheese,Fry until crisp
+Brazil,Acarajé,Black-eyed peas; Shrimp,Fry and serve
+Brazil,Farofa,Cassava flour; Butter,Sauté together
+Brazil,Escondidinho,Mashed cassava; Meat layer,Bake until golden
+Brazil,Feijão Tropeiro,Beans; Bacon; Eggs,Sauté together
+Argentina,Asado,Beef ribs; Spices,Grill slowly
+Argentina,Empanadas,Dough; Beef; Onion,Bake or fry
+Argentina,Milanesa,Beef cutlet; Bread crumbs,Fry until golden
+Argentina,Provoleta,Provolone cheese; Oregano,Grill and serve
+Argentina,Choripán,Chorizo; Bread,Grill and serve
+Argentina,Locro,Corn; Beans; Meat,Simmer slowly
+Argentina,Humita,Corn; Cheese; Pastry,Bake in corn husk
+Argentina,Matambre,Beef; Herbs,Grill and slice
+Argentina,Alfajores,Shortbread; Dulce de leche,Assemble and dust with sugar
+Argentina,Puchero,Meat; Vegetables; Chickpeas,Simmer until cooked
+Morocco,Tagine,Lamb; Apricots; Spices,Braise in tagine
+Morocco,Couscous,Couscous; Vegetables; Meat,Steam together
+Morocco,Pastilla,Pigeon; Almonds; Phyllo,Bake with layers
+Morocco,Harira,Lentils; Chickpeas; Tomato,Simmer soup
+Morocco,Tangia,Lamb; Spices; Preserved lemon,Slow cook
+Morocco,Mechoui,Lamb; Spices,Roast whole
+Morocco,Briouats,Phyllo; Meat; Almonds,Fry or bake
+Morocco,Zaalouk,Eggplant; Tomato; Garlic,Sauté and mash
+Morocco,Rfissa,Chicken; Lentils; Spices,Simmer slowly
+Morocco,Msemmen,Flour; Butter; Yeast,Pan-fry layered dough
+India,Butter Chicken,Chicken; Tomato gravy; Cream,Simmer until rich
+India,Biryani,Rice; Spices; Meat,Dum cook layered
+India,Masala Dosa,Rice batter; Potato masala,Cook like crêpe
+India,Chole,Chickpeas; Spices,Simmer until soft
+India,Palak Paneer,Spinach; Cottage cheese; Cream,Simmer together
+India,Tandoori Chicken,Chicken; Yogurt; Spices,Char-grill
+India,Aloo Gobi,Potato; Cauliflower; Spices,Sauté until tender
+India,Samosa,Potato; Peas; Pastry,Deep fry
+India,Rogan Josh,Lamb; Kashmiri spices,Braise slowly
+India,Jalebi,Flour; Sugar syrup; Saffron,Fry and dip
+Japan,Sushi,Rice; Fish; Nori,Roll and slice
+Japan,Ramen,Noodles; Broth; Pork; Egg,Simmer broth long
+Japan,Tonkatsu,Pork cutlet; Panko,Fry until crisp
+Japan,Tempura,Shrimp; Vegetables; Batter,Deep fry
+Japan,Katsu Curry,Pork katsu; Curry sauce,Serve with rice
+Japan,Onigiri,Rice; Seaweed,Form into triangles
+Japan,Udon Soup,Thick noodles; Dashi broth,Serve hot
+Japan,Shabu Shabu,Thin beef; Vegetables,Swish in hot broth
+Japan,Okonomiyaki,Cabbage; Batter; Pork,Griddle-cook
+Japan,Tamago Sushi,Egg omelet; Rice,Press over rice
+Vietnam,Phở,Beef; Rice noodles; Broth,Simmer broth and serve
+Vietnam,Bánh mì,Baguette; Pork; Pickled vegetables,Assemble sandwich
+Vietnam,Gỏi cuốn,Rice paper; Shrimp; Herbs,Roll fresh
+Vietnam,Bún chả,Pork patties; Vermicelli noodles,Grill and serve
+Vietnam,Cao lầu,Noodles; Pork; Greens,Assemble bowl
+Vietnam,Bánh xèo,Rice batter; Pork; Shrimp,Pan-fry crepe
+Vietnam,Chả giò,Rice paper; Pork; Vegetables,Fry rolls
+Vietnam,Bún bò Huế,Beef; Noodles; Broth,Simmer spicy broth
+Vietnam,Bánh cuốn,Rice sheets; Pork; Mushroom,Steam and serve
+Vietnam,Mi Quang,Rice noodles; Pork; Herbs,Assemble with broth
+Malaysia,Nasi Lemak,Rice; Coconut milk; Anchovies; Egg,Cook rice and serve with sides
+Malaysia,Rendang,Beef; Coconut milk; Spices,Slow cook until tender
+Malaysia,Char Kway Teow,Rice noodles; Shrimp; Soy sauce,Stir fry on high heat
+Malaysia,Hainanese Chicken Rice,Chicken; Rice; Garlic,Poach and serve with sauce
+Malaysia,Satay,Chicken; Peanut sauce; Spices,Grill skewers and serve
+Malaysia,Laksa,Rice noodles; Coconut broth; Shrimp,Simmer soup
+Malaysia,Roti Canai,Flour; Butter; Water,Pan-fry layered bread
+Malaysia,Beef Rendang,Beef; Coconut milk; Spices,Slow cook until tender
+Malaysia,Teh Tarik,Tea; Condensed milk,Pull tea for froth
+Malaysia,Ayam Percik,Chicken; Coconut milk; Spices,Grill and baste
+Indonesia,Nasi Goreng,Rice; Egg; Soy sauce,Stir fry together
+Indonesia,Gado-Gado,Vegetables; Peanut sauce,Boil and mix
+Indonesia,Sate Ayam,Chicken; Peanut sauce,Grill skewers
+Indonesia,Rendang,Beef; Coconut milk; Spices,Slow cook
+Indonesia,Bakso,Meatballs; Noodles; Broth,Serve hot
+Indonesia,Mie Goreng,Noodles; Vegetables; Soy sauce,Stir fry
+Indonesia,Lumpia,Spring roll wrapper; Vegetables; Meat,Fry until crisp
+Indonesia,Soto Ayam,Chicken; Broth; Noodles,Simmer soup
+Indonesia,Nasi Uduk,Rice; Coconut milk; Spices,Cook rice with coconut milk
+Indonesia,Ayam Goreng,Chicken; Spices; Oil,Fry until crisp
+South Korea,Bibimbap,Rice; Vegetables; Egg,Mix ingredients in bowl
+South Korea,Bulgogi,Beef; Soy sauce; Sugar,Marinate and grill
+South Korea,Kimchi,Chinese cabbage; Chili; Garlic,Ferment
+South Korea,Tteokbokki,Rice cakes; Chili sauce,Stir fry
+South Korea,Samgyeopsal,Pork belly; Garlic,Grill and wrap in lettuce
+South Korea,Japchae,Glass noodles; Vegetables; Soy sauce,Stir fry
+South Korea,Kimchi Jjigae,Kimchi; Pork; Tofu,Simmer stew
+South Korea,Sundubu Jjigae,Soft tofu; Seafood; Broth,Simmer spicy stew
+South Korea,Haemul Pajeon,Flour; Seafood; Green onions,Pan-fry pancake
+South Korea,Budae Jjigae,Sausage; Spam; Kimchi,Simmer hot pot
+China,Kung Pao Chicken,Chicken; Peanuts; Chilies,Stir fry
+China,Mapo Tofu,Tofu; Chili bean paste; Pork,Braise in sauce
+China,Chow Mein,Noodles; Vegetables; Soy sauce,Stir fry
+China,Peking Duck,Duck; Pancakes; Hoisin sauce,Roast and slice
+China,Fried Rice,Rice; Egg; Vegetables,Stir fry in wok
+China,Wonton Soup,Wontons; Broth,Serve hot
+China,Dumplings,Pork filling; Dough,Boil or steam
+China,Hot Pot,Assorted meats; Broth,Cook at table
+China,Dan Dan Noodles,Noodles; Chili sauce,Serve spicy noodles
+China,Sweet and Sour Pork,Pork; Pineapple; Bell peppers,Stir fry with sauce
+Singapore,Hainanese Chicken Rice,Chicken; Rice; Garlic,Poach chicken and serve
+Singapore,Chilli Crab,Crab; Chili sauce,Stir fry and serve
+Singapore,Laksa,Rice noodles; Coconut milk; Shrimp,Simmer broth
+Singapore,Roti Prata,Flour; Butter; Water,Pan-fry flatbread
+Singapore,Satay,Chicken; Peanut sauce,Grill skewers
+Singapore,Fish Head Curry,Fish head; Curry paste,Simmer in coconut milk
+Singapore,Hokkien Mee,Noodles; Prawns; Squid,Stir fry with stock
+Singapore,Char Kway Teow,Rice noodles; Soy sauce; Egg,Stir fry on high heat
+Singapore,Kaya Toast,Bread; Coconut jam; Butter,Toast and serve
+Singapore,Popiah,Rice paper; Vegetables; Sauce,Wrap and serve
+Philippines,Adobo,Chicken; Vinegar; Soy sauce,Braise and simmer
+Philippines,Sinigang,Pork; Tamarind; Vegetables,Simmer sour soup
+Philippines,Lechon,Pig; Spices,Roast until crispy
+Philippines,Longganisa,Pork sausage; Spices,Pan-fry
+Philippines,Pancit Canton,Noodles; Vegetables; Soy sauce,Stir fry together
+Philippines,Halo-Halo,Shaved ice; Beans; Fruit,Assemble dessert
+Philippines,Laing,Taro leaves; Coconut milk; Chilies,Simmer until tender
+Philippines,Kare-Kare,Oxtail; Peanut sauce,Braise and serve
+Philippines,Bibingka,Rice flour; Coconut milk; Egg,Bake and serve
+Philippines,Champorado,Rice; Cocoa; Sugar,Cook into porridge
