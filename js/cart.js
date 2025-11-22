@@ -56,6 +56,7 @@ checkoutButton.addEventListener('click', () => {
     } else {
         window.location.href = 'checkout.html';
     }
+    console.log("Checkout button clicked.");
 });
 
     
