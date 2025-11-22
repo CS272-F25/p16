@@ -42,12 +42,11 @@ cart.forEach(item => {
         }
         localStorage.setItem('cart', JSON.stringify(cart));
         console.log("Cart updated:", cart);
-        totalPriceElement.innerText = `$${cart.reduce((sum, item) => sum + item.numericPrice * item.quantity, 0).toFixed(2)}`;
+        totalPriceElement.innerText = `Total Price: $${cart.reduce((sum, item) => sum + item.numericPrice * item.quantity, 0).toFixed(2)}`;
     });
 
 });
-totalPriceElement.innerText = `$${cart.reduce((sum, item) => sum + item.numericPrice * item.quantity, 0).toFixed(2)}`;
-
+totalPriceElement.innerText = `Total Price: $${cart.reduce((sum, item) => sum + item.numericPrice * item.quantity, 0).toFixed(2)}`;
 
 const checkoutButton = document.getElementById('checkout-button');
 checkoutButton.addEventListener('click', () => {
