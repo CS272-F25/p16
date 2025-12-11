@@ -8,70 +8,124 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
-    <body>
-        <div id="navbar"></div>
-        
-        <section class="container text-center py-5">
-            <h1>About Smart Grocery</h1>
-            <p>Online shopping website built to help you shop easier and more efficiently</p>
-        </section>
-        
-        <section class="container py-4">
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Project Description:</h2>
-                            <p class="card-text">
-                                Our project is an interactive online grocery store that is designed to 
-                                simulate a real e-commerce shopping experience. Our website will allow 
-                                users to browse items, learn more about each item (like their origin, 
-                                nutrition facts, and cooking recommendations), add items to cart and 
-                                submit order forms.
-                            </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">What you will find:</h2>
-                        <p class="card-text">
-                            Our project is an interactive online grocery store designed to simulate a 
-                            real ecommerce shopping experience. You can browse items, find recipies from 
-                            any country, see the ingredients and instructions, and add them to your cart. 
-                            All in one place!
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Made By:</h2>
-                        <p class="card-text">
-                            <ul>
-                                <li>Enming Yang</li>
-                                <li>Gabe Schmidt</li>
-                                <li>Justin Mildebrandt</li>
-                                <li>Edric Zhou</li>
-                            </ul>  
-                        </p>
-                    </div>
-                </div>
-            </div>
-
+<body>
+    <div id="navbar"></div>
+    
+    <header class="bg-dark text-white text-center py-5 mb-5">
+        <div class="container">
+            <i class="bi bi-people-fill display-4 text-success mb-3"></i>
+            <h1 class="display-4 fw-bold">About Smart Grocery</h1>
+            <p class="lead text-white-50">An online grocery platform, built to help you!</p>
         </div>
+    </header>
+    
+    <main class="container mb-5">
+        
+        <section class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="p-4 bg-light rounded-3 shadow-sm h-100">
+                    <h2 class="h3 mb-3"><i class="bi bi-seedling text-success me-2"></i> Our Origin Story</h2>
+                    <p>
+                        Smart Grocery started with a simple question: <em>"Why is online grocery shopping so complicated?"</em>
+                    </p>
+                    <p>
+                        Founded in 2025 by a group of CS472 students, we set out to build a platform that wasn't just a list of products, but a better list of products
+                    </p>
+                   
+                </div>
+            </div>
+            <div class="col-lg-6">
+            </div>
         </section>
 
-        <div id="footer"></div>
+        <section class="mb-5">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-5 text-center">
+                    <h2 class="h3 mb-4">Our Community Philosophy</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="h-100">
+                                <h5>Sustainability First</h5>
+                                <p class="text-muted small">We prioritize zero food waste.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="h-100">
+                                <h5>Healthy Living</h5>
+                                <p class="text-muted small">Making nutritional information transparent and accessible for everyone.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="h-100">
+                                <h5>Giving Back</h5>
+                                <p class="text-muted small">The majority of our proceeds go directly out into the community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/global.js"></script>
-        <script src="js/about.js"></script>
+        <section class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-success text-dark fw-bold">
+                        <i class="bi bi-laptop me-2"></i> The Project
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Our project is an interactive online grocery store that is designed to simulate a real e-commerce shopping experience. Our website will allow users to browse items, learn more about each item (like their origin, nutrition facts, and cooking recommendations), add items to cart and submit order forms. We will use our knowledge of HTML, CSS and JS to make a clean and polished site. </p>
+                        
+                        <details class="mt-3">
+                            <summary class="fw-bold text-primary" style="cursor: pointer;">View Technical Specs</summary>
+                            <ul class="list-group list-group-flush mt-2 small">
+                                <li class="list-group-item"><strong>Frontend:</strong> HTML5, Bootstrap 5</li>
+                                <li class="list-group-item"><strong>Styling:</strong> Custom CSS & Bootstrap Utilities</li>
+                                <li class="list-group-item"><strong>Logic:</strong> JavaScript</li>
+                                <li class="list-group-item"><strong>Data:</strong> Fetch API & CSV Parsing</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white fw-bold">
+                        <i class="bi bi-person-badge me-2"></i> The Dev Team
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Enming Yang
+                                <span class="badge bg-secondary rounded-pill">Developer</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Gabe Schmidt
+                                <span class="badge bg-secondary rounded-pill">Developer</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Justin Mildebrandt
+                                <span class="badge bg-secondary rounded-pill">Developer</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Edric Zhou
+                                <span class="badge bg-secondary rounded-pill">Developer</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/global.js"></script>
     </body>
 </html>
