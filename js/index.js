@@ -40,7 +40,7 @@ async function loadFeaturedProducts() {
                 <div class="card-body text-center">
                         <h5 class="card-title text-truncate">${product.name}</h5>
                         <p class="card-text text-success fw-bold fs-5">${product.price}</p>
-                        <a href="products.html" class="btn btn-sm btn-light w-100">Add to Cart</a>
+                        <a href="products.html" class="btn btn-sm btn-primary w-100">Add to Cart</a>
                     </div>
                 </div>
             </div>
