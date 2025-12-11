@@ -8,7 +8,8 @@ if (supportForm) {
     });
 }
 
-function copyToClipboard(email) {
-  navigator.clipboard.writeText("Hello@SmartGrocery.com");
+function copyToClipboard() {
+  const email = "Support@SmartGrocry.com"
+  navigator.clipboard.writeText(email);
   alert("Email address copied to clipboard: ");
 }
