@@ -12,8 +12,8 @@ fetch('https://raw.githubusercontent.com/mildebrandtj/product-data-p16/refs/head
         const [name, price] = row.split(',');
         return {
           name,
-          price: price.trim(), // still a string!
-          numericPrice: parseFloat(price.replace('$', '').trim()) // now usable for sorting
+          price: price.trim(), 
+          numericPrice: parseFloat(price.replace('$', '').trim()) 
         };
       });
 
@@ -35,8 +35,12 @@ function addToCart(product, quantity) {
   }
   // save to localStorage
   localStorage.setItem('cart', JSON.stringify(cart));
-  //alert!
-  alert(`${quantity} * ${product.name} added to cart!`);
+
+  const toastElement = document.getElementById('cartToast');
+
+  const toast = new bootstrap.Toast(toastElement);
+
+toast.show();
 }
 
 
