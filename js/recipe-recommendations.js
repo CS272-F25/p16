@@ -22,6 +22,7 @@ let lastSearch = {
 };
 
 // ================= HELPERS =================
+// The API had links in the decscription, so I had to strip the links into html text
 function stripHtml(html) {
   const div = document.createElement("div");
   div.innerHTML = html;
@@ -29,6 +30,7 @@ function stripHtml(html) {
 }
 
 // ================= EVENT LISTENERS =================
+// Search button with filters
 searchBtn.addEventListener("click", async () => {
   const ingredients = ingredientsInput.value.trim();
   const cuisine = countryDropdown.value;
@@ -38,7 +40,7 @@ searchBtn.addEventListener("click", async () => {
     return;
   }
 
-  // Reset pagination state
+  // Reset pagination state (There was an issue where going back to page 1 didn't work right)
   currentPage = 0;
   lastSearch = { ingredients, cuisine };
 
@@ -61,7 +63,8 @@ prevBtn.addEventListener("click", async () => {
   }
 });
 
-// ================= DATA FETCH =================
+// ================= DATA FETCH ================='
+// Fetch recipes from Spoonacular API
 async function fetchRecipes(ingredients, cuisine, page) {
   const offset = page * PAGE_SIZE;
 
@@ -86,6 +89,7 @@ async function fetchRecipes(ingredients, cuisine, page) {
 }
 
 // ================= PAGE LOADER =================
+// Load recipes for the current page (keep track of which page we're on)
 async function loadPage() {
   recipesContainer.innerHTML = "<p>Loading recipes...</p>";
 
@@ -104,6 +108,7 @@ async function loadPage() {
 }
 
 // ================= UI RENDER =================
+// Display recipes in the UI (each individual recipe card)
 function displayRecipes(recipes) {
   recipesContainer.innerHTML = "";
 
