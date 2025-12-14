@@ -5,7 +5,7 @@ const itemContainer = document.getElementById('item-container');
 itemContainer.innerHTML = '';
 const totalPriceElement = document.getElementById('total-price');
 const totalQuantityElement = document.getElementById('total-quantity');
-const confirmButton = document.getElementById('confirm-button');
+const checkoutForm = document.getElementById('checkout-form');
 
 cart.forEach(item => {
     const itemElement = document.createElement('div');
@@ -37,14 +37,27 @@ cart.forEach(item => {
 
 totalPriceElement.innerHTML = `Total Price: $${cart.reduce((sum, item) => sum + item.numericPrice * item.quantity, 0).toFixed(2)}`;
 totalQuantityElement.innerHTML = `Total Items: ${cart.reduce((sum, item) => sum + item.quantity, 0)}`;
-confirmButton.addEventListener('click', () => {
-    if (cart.length === 0) {
-        alert("Your cart is empty! Please add items before confirming your order.");
-    } else {
-        alert("Thank you for your purchase! Your order has been confirmed.");
+
+if (checkoutForm) {
+    checkoutForm.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        if (cart.length === 0) {
+            alert("Your cart is empty! Please add items before confirming your order.");
+            return;
+        } 
         cart = [];
-        localStorage.setItem('cart', JSON.stringify(cart));
-        window.location.href = 'index.html';
+        localStorage.removeItem('cart');
+        
+        itemContainer.innerHTML = '';
+        totalPriceElement.innerHTML = 'Total Price: $0.00';
+        totalQuantityElement.innerHTML = 'Total Items: 0';
+        
+        const paymentDetails = document.getElementById('payment-details');
+        if(paymentDetails) paymentDetails.removeAttribute('open');
+
+        const successModal = new bootstrap.Modal(document.getElementById('orderSuccessModal'));
+        successModal.show();
+        
         console.log("Order confirmed and cart cleared.");
-    }
-});
+    });
+}
