@@ -9,7 +9,7 @@ async function loadFeaturedProducts() {
         const response = await fetch('src/data/merchandise.csv');
         const csvText = await response.text();
         
-        const allLines = csvText.split('\n');
+        const allLines = csvText.split('\n'); //parse data
         const productLines = allLines.slice(1);
 
         let cleanProducts = []; // Array to hold cleaned product data
@@ -18,7 +18,7 @@ async function loadFeaturedProducts() {
             const currentLine = productLines[i];
             const columns = currentLine.split(',');
 
-            if (columns.length >= 2) {
+            if (columns.length >= 2) { //retry framing data
                 cleanProducts.push({
                     name: columns[0].trim(),
                     price: columns[1].trim()
@@ -44,7 +44,7 @@ async function loadFeaturedProducts() {
                     </div>
                 </div>
             </div> 
-            `; 
+            `; //show cards^
         }
 
         container.innerHTML = htmlContent;
