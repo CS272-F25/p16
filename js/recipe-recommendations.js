@@ -1,64 +1,74 @@
-// === 20 Countries in CSV ===
-const countries = [
-  "Italy", "Spain", "Mexico", "Thailand", "Turkey",
-  "Greece", "France", "Portugal", "Brazil", "Argentina",
-  "Morocco", "India", "Japan", "Vietnam", "Malaysia",
-  "Indonesia", "South Korea", "China", "Singapore", "Philippines"
-];
+const API_KEY = "8ed963731dc9494d94e886e150d6ce1f";
 
-// Elements
-const dropdownMenu = document.getElementById("countryDropdownMenu");
-const dropdownButton = document.getElementById("countryDropdown");
-const selectedCountry = document.getElementById("selectedCountry");
+const ingredientsInput = document.getElementById("ingredientsInput");
+const countryDropdown = document.getElementById("countryDropdown");
 const recipesContainer = document.getElementById("recipesContainer");
+const searchBtn = document.getElementById("searchBtn");
 
-// --- Populate Dropdown ---
-countries.forEach(country => {
-  const li = document.createElement("li");
-  const a = document.createElement("a");
-  a.className = "dropdown-item";
-  a.href = "#";
-  a.textContent = country;
-  li.appendChild(a);
-  dropdownMenu.appendChild(li);
-
-  a.addEventListener("click", () => {
-    dropdownButton.textContent = country;
-    selectedCountry.textContent = country;
-    loadRecipes(country);
-  });
-});
-
-// --- Load CSV and Filter by Country ---
-async function loadRecipes(country) {
-  const response = await fetch("src/data/recipes.csv");
-  const csvText = await response.text();
-
-  const rows = csvText.trim().split("\n").slice(1);
-
-  const recipes = rows
-    .map(row => {
-      const [cuisine, name, ingredients, instructions] = row.split(",");
-      return { cuisine, name, ingredients, instructions };
-    })
-    .filter(recipe => recipe.cuisine === country);
-
-  displayRecipes(recipes);
+// --- Helper to strip all HTML tags ---
+function stripHtml(html) {
+  const tmp = document.createElement("div");
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || "";
 }
 
-// --- Display Recipes on Page ---
+searchBtn.addEventListener("click", async () => {
+  const ingredients = ingredientsInput.value.trim();
+  const cuisine = countryDropdown.value;
+
+  if (!ingredients) {
+    alert("Please enter at least one ingredient.");
+    return;
+  }
+
+  recipesContainer.innerHTML = "<p>Loading recipes...</p>";
+
+  const recipes = await fetchRecipes(ingredients, cuisine);
+  displayRecipes(recipes);
+});
+
+async function fetchRecipes(ingredients, cuisine) {
+  const params = new URLSearchParams({
+    includeIngredients: ingredients,
+    cuisine,
+    number: 25,
+    addRecipeInformation: true
+  });
+
+  const url = `https://api.spoonacular.com/recipes/complexSearch?${params}&apiKey=${API_KEY}`;
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    return data.results || [];
+  } catch (err) {
+    console.error(err);
+    return [];
+  }
+}
+
 function displayRecipes(recipes) {
   recipesContainer.innerHTML = "";
 
-  recipes.forEach(recipe => {
+  if (!recipes.length) {
+    recipesContainer.textContent = "No recipes found.";
+    return;
+  }
+
+  recipes.forEach(r => {
+    // Strip all HTML from summary
+    const summaryText = r.summary ? stripHtml(r.summary) : "No summary available.";
+
     const card = document.createElement("div");
-    card.className = "col-md-4";
+    card.className = "col-md-6";
 
     card.innerHTML = `
       <div class="card h-100 shadow-sm p-3">
-        <h5>${recipe.name}</h5>
-        <p><strong>Ingredients:</strong> ${recipe.ingredients}</p>
-        <p><strong>Instructions:</strong> ${recipe.instructions}</p>
+        <img src="${r.image}" class="card-img-top mb-2" alt="${r.title}">
+        <div class="card-body">
+          <h5 class="card-title">${r.title}</h5>
+          <p>${summaryText}</p>
+        </div>
       </div>
     `;
 
