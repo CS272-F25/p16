@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function loadFeaturedProducts() {
-    const container = document.getElementById('featured-products');
+    const container = document.getElementById('featured-products'); //sale products featured
     
     try {
         const response = await fetch('src/data/merchandise.csv');
@@ -12,7 +12,7 @@ async function loadFeaturedProducts() {
         const allLines = csvText.split('\n');
         const productLines = allLines.slice(1);
 
-        let cleanProducts = [];
+        let cleanProducts = []; // Array to hold cleaned product data
 
         for (let i = 0; i < productLines.length; i++) {
             const currentLine = productLines[i];
@@ -43,12 +43,12 @@ async function loadFeaturedProducts() {
                         <a href="products.html" class="btn btn-sm btn-primary w-100">Add to Cart</a>
                     </div>
                 </div>
-            </div>
-            `;
+            </div> 
+            `; 
         }
 
         container.innerHTML = htmlContent;
-
+// error catch
     } catch (error) {
         console.error('Error:', error);
         container.innerHTML = '<p class="text-danger">Could not load specials.</p>';
