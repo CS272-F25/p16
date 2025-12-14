@@ -1,17 +1,34 @@
-const API_KEY = "8ed963731dc9494d94e886e150d6ce1f";
+import { SPOONACULAR_API_KEY } from "./config.js";
 
+const API_KEY = SPOONACULAR_API_KEY;
+
+const PAGE_SIZE = 10;
+
+// ================= DOM ELEMENTS =================
 const ingredientsInput = document.getElementById("ingredientsInput");
 const countryDropdown = document.getElementById("countryDropdown");
 const recipesContainer = document.getElementById("recipesContainer");
 const searchBtn = document.getElementById("searchBtn");
 
-// --- Helper to strip all HTML tags ---
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const pageIndicator = document.getElementById("pageIndicator");
+
+// ================= STATE =================
+let currentPage = 0;
+let lastSearch = {
+  ingredients: "",
+  cuisine: ""
+};
+
+// ================= HELPERS =================
 function stripHtml(html) {
-  const tmp = document.createElement("div");
-  tmp.innerHTML = html;
-  return tmp.textContent || tmp.innerText || "";
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.textContent || div.innerText || "";
 }
 
+// ================= EVENT LISTENERS =================
 searchBtn.addEventListener("click", async () => {
   const ingredients = ingredientsInput.value.trim();
   const cuisine = countryDropdown.value;
@@ -21,17 +38,38 @@ searchBtn.addEventListener("click", async () => {
     return;
   }
 
-  recipesContainer.innerHTML = "<p>Loading recipes...</p>";
+  // Reset pagination state
+  currentPage = 0;
+  lastSearch = { ingredients, cuisine };
 
-  const recipes = await fetchRecipes(ingredients, cuisine);
-  displayRecipes(recipes);
+  prevBtn.disabled = true;
+  nextBtn.disabled = false;
+  pageIndicator.textContent = "Page 1";
+
+  await loadPage();
 });
 
-async function fetchRecipes(ingredients, cuisine) {
+nextBtn.addEventListener("click", async () => {
+  currentPage++;
+  await loadPage();
+});
+
+prevBtn.addEventListener("click", async () => {
+  if (currentPage > 0) {
+    currentPage--;
+    await loadPage();
+  }
+});
+
+// ================= DATA FETCH =================
+async function fetchRecipes(ingredients, cuisine, page) {
+  const offset = page * PAGE_SIZE;
+
   const params = new URLSearchParams({
     includeIngredients: ingredients,
-    cuisine,
-    number: 25,
+    cuisine: cuisine,
+    number: PAGE_SIZE,
+    offset: offset,
     addRecipeInformation: true
   });
 
@@ -47,6 +85,25 @@ async function fetchRecipes(ingredients, cuisine) {
   }
 }
 
+// ================= PAGE LOADER =================
+async function loadPage() {
+  recipesContainer.innerHTML = "<p>Loading recipes...</p>";
+
+  const recipes = await fetchRecipes(
+    lastSearch.ingredients,
+    lastSearch.cuisine,
+    currentPage
+  );
+
+  displayRecipes(recipes);
+
+  pageIndicator.textContent = `Page ${currentPage + 1}`;
+
+  prevBtn.disabled = currentPage === 0;
+  nextBtn.disabled = recipes.length < PAGE_SIZE;
+}
+
+// ================= UI RENDER =================
 function displayRecipes(recipes) {
   recipesContainer.innerHTML = "";
 
@@ -55,18 +112,19 @@ function displayRecipes(recipes) {
     return;
   }
 
-  recipes.forEach(r => {
-    // Strip all HTML from summary
-    const summaryText = r.summary ? stripHtml(r.summary) : "No summary available.";
+  recipes.forEach(recipe => {
+    const summaryText = recipe.summary
+      ? stripHtml(recipe.summary)
+      : "No description available.";
 
     const card = document.createElement("div");
-    card.className = "col-md-6";
+    card.className = "col-md-6 mb-4";
 
     card.innerHTML = `
       <div class="card h-100 shadow-sm p-3">
-        <img src="${r.image}" class="card-img-top mb-2" alt="${r.title}">
+        <img src="${recipe.image}" class="card-img-top mb-2" alt="${recipe.title}">
         <div class="card-body">
-          <h5 class="card-title">${r.title}</h5>
+          <h5 class="card-title">${recipe.title}</h5>
           <p>${summaryText}</p>
         </div>
       </div>
